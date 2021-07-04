@@ -1,0 +1,41 @@
+version: '3.4'
+
+services: 
+  app:
+    build: .
+    ports: 
+      - 3000:3000
+      - 9229:9229
+    volumes: 
+      - .:/home/backend
+      - ./node_modules:/home/backend/node_modules    
+    environment: 
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=cars
+      - POSTGRES_PORT=5432
+      - POSTGRES_HOST=info_postgres
+      - PORT=3000
+    depends_on: 
+      - pg
+    networks:
+      - info-network
+    links:
+      - pg
+    command: yarn start:debug
+  pg: 
+    image: postgres
+    container_name: info_postgres
+    ports: 
+      - 5432:5432
+    environment: 
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: cars
+    networks:
+      - info-network
+    
+networks:
+  info-network:
+    driver: bridge
+      
