@@ -20,10 +20,10 @@ $ cd ./infoSistemasTest
 # Instalation
 ## Running the app with docker
 ```bash
-#install the dependencies
+# Install the dependencies
 $ npm i
 
-# iniciate the docker
+# Iniciate the docker
 $ docker-compose up --build
 ```
 
@@ -38,28 +38,28 @@ Same in the print below but replacing fields with your connection of postgres
 
 ### Start the app
 ```bash
-#install node_modules
+# Install the dependencies
 $ npm install
 
-# development
+# Development
 $ npm run start
 
-# watch mode
+# Watch mode
 $ npm run start:dev
 ```
 # Unit Test
 
 ```bash
-# unit tests
+# Unit tests
 $ npm run test
 
-# test coverage
+# Test coverage
 $ npm run test:cov
 ```
 # Executing OpenApi/Swagger
  In the url after run the program access for enter in the swagger and see all the routes with the respectives parameters.
  ```bash
-http://localhost:3000/api/v1
+ http://localhost:3000/api/v1
 ```
 ![image](https://user-images.githubusercontent.com/58075535/124395497-cde12e00-dcda-11eb-842b-9213a008bc73.png)
 
