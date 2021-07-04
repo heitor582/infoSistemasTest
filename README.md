@@ -1,73 +1,91 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
-</p>
+# Description
+This project is a test for be BackEnd developer at InfoSistemas and consist in crud of cars.
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+### Stack
+- Node 16.3.0
+- NestJs
+- OpenApi
+- Jest
+- Typescript
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
-
-## Description
-
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
-## Installation
+# Clone
 
 ```bash
-$ npm install
+# Clone github project
+$ git clone https://github.com/heitor582/infoSistemasTest.git
+
+# Enter the folder
+$ cd ./infoSistemasTest
+```
+# Instalation
+## Running the app with docker
+```bash
+# iniciate the docker
+$ docker-compose up --build
 ```
 
-## Running the app
+## Running the app without Docker
+### Configuration
 
+Open .env.example file and rename for .env
+
+Same in the print below but replacing fields with your connection of postgres
+
+![image](https://user-images.githubusercontent.com/58075535/124395440-8fe40a00-dcda-11eb-9d77-e527e05eef5d.png)
+
+### Start the app
 ```bash
+#install node_modules
+$ npm install
+
 # development
 $ npm run start
 
 # watch mode
 $ npm run start:dev
-
-# production mode
-$ npm run start:prod
 ```
 
-## Test
+# Unit Test
 
 ```bash
 # unit tests
 $ npm run test
 
-# e2e tests
-$ npm run test:e2e
-
 # test coverage
 $ npm run test:cov
 ```
+# Executing OpenApi/Swagger
+ In the url after run the program access for enter in the swagger and see all the routes with the respectives parameters.
+ ```bash
+http://localhost:3000/api/v1
+```
+![image](https://user-images.githubusercontent.com/58075535/124395497-cde12e00-dcda-11eb-842b-9213a008bc73.png)
 
-## Support
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+# Import archive of Postman
+  ### First what is it Postman?
+  Postman is a program to make, organize and view the result of api requests.
+  ### Running the app 
+At the root of the project is a json that contains data that the postman program processes and transforms into pre-made requests.
 
-## Stay in touch
+In the postman click import -> Upload Files
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+![image](https://user-images.githubusercontent.com/58075535/124396541-92e1f900-dce0-11eb-9a0f-68eed8e69eb7.png)
+![image](https://user-images.githubusercontent.com/58075535/124396554-9bd2ca80-dce0-11eb-9ceb-69372af6613f.png)
 
-## License
 
-Nest is [MIT licensed](LICENSE).
+Import the json that is at the root of the project called 'InfoSistemas.postman_collection.json'
+
+![image](https://user-images.githubusercontent.com/58075535/124396566-b1e08b00-dce0-11eb-943b-a6a7c3c9c818.png)
+
+And click in Import button
+
+![image](https://user-images.githubusercontent.com/58075535/124396573-bd33b680-dce0-11eb-917f-7f3e4a284972.png)
+
+Now select the project at Postman and just do some requests clicking in the request and send
+
+![image](https://user-images.githubusercontent.com/58075535/124396581-cb81d280-dce0-11eb-92d6-af710d1aa27e.png)
+
+![image](https://user-images.githubusercontent.com/58075535/124396612-f2d89f80-dce0-11eb-93dc-ea98eae46526.png)
+
+
