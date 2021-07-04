@@ -3,8 +3,8 @@ FROM node:latest
 RUN mkdir -p /home/backend
 WORKDIR /home/backend
 COPY package.json ./
-COPY yarn.lock ./
+COPY package-lock.json ./
 RUN npm config set cache /home/node/app/.npm-cache --global
 RUN npm i -g @nestjs/cli
-RUN yarn
+RUN npm i
 EXPOSE 3000

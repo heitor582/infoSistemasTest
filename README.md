@@ -20,6 +20,9 @@ $ cd ./infoSistemasTest
 # Instalation
 ## Running the app with docker
 ```bash
+#install the dependencies
+$ npm i
+
 # iniciate the docker
 $ docker-compose up --build
 ```
@@ -44,7 +47,6 @@ $ npm run start
 # watch mode
 $ npm run start:dev
 ```
-
 # Unit Test
 
 ```bash
